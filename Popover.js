@@ -113,7 +113,7 @@ var Popover = React.createClass({
   computeBottomGeometry({displayArea, fromRect, contentSize, arrowSize}) {
     var popoverOrigin = new Point(
       Math.min(displayArea.x + displayArea.width - contentSize.width,
-        Math.max(displayArea.x, fromRect.x + (fromRect.width - contentSize.width) / 2)),
+        Math.max(displayArea.x, fromRect.x + (fromRect.width - contentSize.width) / 1)),
       fromRect.y + fromRect.height + arrowSize.height);
     var anchorPoint = new Point(fromRect.x + fromRect.width / 2.0, fromRect.y + fromRect.height);
 
@@ -392,8 +392,8 @@ var styles = StyleSheet.create({
     shadowOpacity: 0.8,
   },
   content: {
-    borderRadius: 3,
-    padding: 6,
+    borderRadius: 2,
+    padding: 0,
     backgroundColor: '#fff',
   },
   arrow: {
